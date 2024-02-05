@@ -1,0 +1,84 @@
+﻿<Window
+    x:Class="Индивидуальное_предпринимательство_по_производство_мыла.Zakaz"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Индивидуальное_предпринимательство_по_производство_мыла"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Zakaz"
+    Width="1000"
+    Height="450"
+    AllowsTransparency="True"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Page>
+        <Page.Resources>
+            <local:ImgConverter x:Key="imageconverter" />
+        </Page.Resources>
+        <Grid Background="LightSeaGreen">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="200" />
+            </Grid.ColumnDefinitions>
+
+            <Frame
+                x:Name="myFrame"
+                Grid.Column="0"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                NavigationUIVisibility="Hidden" />
+
+
+            <StackPanel
+                Grid.Column="1"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch">
+
+
+                <StackPanel Margin="0,20,0,0" VerticalAlignment="Bottom">
+                    <Button
+                        Width="185"
+                        Height="40"
+                        Margin="0,5,0,10"
+                        Background="Transparent"
+                        BorderBrush="White"
+                        BorderThickness="1"
+                        Click="Button_Click"
+                        Content="Каталог"
+                        FontFamily="Fonts/#Main"
+                        FontSize="16"
+                        Foreground="White" />
+
+                    <Button
+                        Width="185"
+                        Height="40"
+                        Margin="0,5,0,10"
+                        Background="Transparent"
+                        BorderBrush="White"
+                        BorderThickness="1"
+                        Click="Button_Click_1"
+                        Content="Корзина"
+                        FontFamily="Fonts/#Main"
+                        FontSize="16"
+                        Foreground="White" />
+
+                    <Button
+                        Width="185"
+                        Height="40"
+                        Margin="0,5,0,5"
+                        VerticalAlignment="Bottom"
+                        Background="Transparent"
+                        BorderBrush="White"
+                        BorderThickness="1"
+                        Click="Home_Click"
+                        Content="Главная страница"
+                        FontFamily="Fonts/#Main"
+                        FontSize="18"
+                        Foreground="White" />
+
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Page>
+</Window>

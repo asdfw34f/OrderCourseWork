@@ -1,0 +1,185 @@
+﻿<Page
+    x:Class="Индивидуальное_предпринимательство_по_производство_мыла.CatalogPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Индивидуальное_предпринимательство_по_производство_мыла"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="CatalogPage"
+    d:DesignHeight="450"
+    d:DesignWidth="1000"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <local:ImgConverter x:Key="imageconverter" />
+    </Page.Resources>
+
+    <Grid Background="Transparent">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="180" />
+            <ColumnDefinition />
+
+        </Grid.ColumnDefinitions>
+        <ListView
+            x:Name="CatalogView"
+            Grid.Column="1"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+            SelectionMode="Single">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Margin="0,0,0,0" Orientation="Horizontal" />
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border
+                        Width="700"
+                        Height="300"
+                        Margin="0,-0.1,0,0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        BorderBrush="LightSkyBlue"
+                        BorderThickness="2"
+                        CornerRadius="3">
+                        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Stretch">
+                            <TextBlock
+                                Margin="10,15,0,5"
+                                HorizontalAlignment="Left"
+                                FontSize="17"
+                                FontWeight="Bold"
+                                Foreground="white"
+                                Text="{Binding Name, StringFormat=Название: {0}}" />
+                            <TextBlock
+                                Margin="20,10,0,5"
+                                HorizontalAlignment="Left"
+                                FontSize="17"
+                                Foreground="White"
+                                Text="{Binding Aroma, StringFormat=Аромат: {0}}" />
+                            <TextBlock
+                                Margin="20,10,0,5"
+                                HorizontalAlignment="Left"
+                                FontSize="17"
+                                Foreground="white"
+                                Text="{Binding Color, StringFormat=Цвет: {0}}" />
+                            <TextBlock
+                                Margin="20,10,0,5"
+                                HorizontalAlignment="Left"
+                                FontSize="15"
+                                Foreground="white"
+                                Text="{Binding Compound, StringFormat=Состав: {0}}" />
+                            <TextBlock
+                                Margin="20,10,0,5"
+                                HorizontalAlignment="Left"
+                                FontSize="17"
+                                FontWeight="Bold"
+                                Foreground="white"
+                                Text="{Binding Count_Saled, StringFormat=Продано: {0}}" />
+                            <Image
+                                Width="230"
+                                Height="200"
+                                HorizontalAlignment="Left"
+                                Source="{Binding Image, Converter={StaticResource imageconverter}}"
+                                Stretch="Uniform" />
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="{x:Type ListViewItem}">
+                    <Setter Property="ToolTip" Value="{Binding Title}" />
+                </Style>
+            </ListView.ItemContainerStyle>
+        </ListView>
+        <DockPanel Grid.Column="0">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Stretch">
+                <TextBlock
+                    Margin="0,10,0,0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="23"
+                    FontWeight="Bold"
+                    Foreground="white">
+                    Поиск:
+                </TextBlock>
+                <TextBox
+                    x:Name="Search"
+                    Width="150"
+                    Height="35"
+                    Margin="10"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    Foreground="White"
+                    TextChanged="Search_TextChanged" />
+
+                <Button
+                    Width="150"
+                    Margin="0,15"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Background="Transparent"
+                    BorderBrush="White"
+                    BorderThickness="1"
+                    Click="Button_Click"
+                    Content="Удалить"
+                    FontFamily="Fonts/#Main"
+                    FontSize="16"
+                    Foreground="White" />
+
+                <TextBlock
+                    Width="150"
+                    Margin="0,10,0,0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    Foreground="white"
+                    TextAlignment="Center"
+                    TextWrapping="WrapWithOverflow">
+                    Количество продаж:
+                </TextBlock>
+                <ComboBox
+                    x:Name="pricebox"
+                    Width="150"
+                    Margin="0,15"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Background="Transparent"
+                    BorderBrush="White"
+                    BorderThickness="1"
+                    FontSize="16"
+                    Foreground="White"
+                    SelectedIndex="0">
+                    <ComboBoxItem Selected="ComboBoxItem_Selected">
+                        <TextBlock
+                            Width="170"
+                            Margin="0"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            FontFamily="Fonts/#Main"
+                            FontSize="16"
+                            Foreground="Black"
+                            Text="По возрастанию" />
+
+                    </ComboBoxItem>
+                    <ComboBoxItem Selected="ComboBoxItem_Selected_1">
+                        <TextBlock
+                            Width="170"
+                            Margin="0"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            FontFamily="Fonts/#Main"
+                            FontSize="16"
+                            Foreground="Black"
+                            Text="По убыванию" />
+                    </ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+        </DockPanel>
+
+    </Grid>
+</Page>

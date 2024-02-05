@@ -1,0 +1,229 @@
+﻿<Window
+    x:Class="Индивидуальное_предпринимательство_по_производство_мыла.Registration"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Индивидуальное_предпринимательство_по_производство_мыла"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Registration"
+    Width="500"
+    Height="350"
+    AllowsTransparency="True"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d">
+
+    <Grid Background="LightSeaGreen">
+        <Button
+            Width="100"
+            Height="25"
+            Margin="7"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Background="Transparent"
+            BorderBrush="White"
+            BorderThickness="1"
+            Click="Button_Click_1"
+            Content="Назад"
+            FontFamily="Fonts/#Main"
+            FontSize="15"
+            Foreground="White" />
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock
+                HorizontalAlignment="Center"
+                FontSize="30"
+                FontWeight="Bold"
+                Foreground="White"
+                TextDecorations="Underline">
+                РЕГИСТРАЦИЯ
+            </TextBlock>
+            <StackPanel
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                    <Label
+                        Width="210"
+                        Margin="0,10,0,3"
+                        HorizontalAlignment="Center"
+                        HorizontalContentAlignment="Center"
+                        FontSize="14"
+                        Foreground="White">
+                        ФИО:
+                    </Label>
+                    <TextBox
+                        x:Name="FIOBox"
+                        Width="150"
+                        Height="25"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        BorderBrush="White"
+                        CaretBrush="White"
+                        FontSize="13"
+                        FontWeight="Bold"
+                        Foreground="White"
+                        InputScope="PersonalFullName"
+                        SelectionBrush="White" />
+
+                    <Label
+                        Width="210"
+                        Margin="0,10,0,3"
+                        HorizontalAlignment="Center"
+                        HorizontalContentAlignment="Center"
+                        FontSize="14"
+                        Foreground="White">
+                        Дата рождения:
+                    </Label>
+
+                    <DatePicker
+                        x:Name="DayBox"
+                        Width="150"
+                        Height="25"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        BorderBrush="White"
+                        FontSize="13"
+                        FontWeight="Bold"
+                        Foreground="SlateGray" />
+                    <Label
+                        Width="210"
+                        Margin="0,10,0,3"
+                        HorizontalAlignment="Center"
+                        HorizontalContentAlignment="Center"
+                        FontSize="14"
+                        Foreground="White">
+                        Адрес:
+                    </Label>
+                    <TextBox
+                        x:Name="AddressBox"
+                        Width="150"
+                        Height="25"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        BorderBrush="White"
+                        CaretBrush="White"
+                        FontSize="13"
+                        FontWeight="Bold"
+                        Foreground="White"
+                        SelectionBrush="White" />
+
+                    <Label
+                        Width="210"
+                        Margin="0,10,0,3"
+                        HorizontalAlignment="Center"
+                        HorizontalContentAlignment="Center"
+                        FontSize="14"
+                        Foreground="White">
+                        Номер телефона:
+                    </Label>
+                    <TextBox
+                        x:Name="PhoneBox"
+                        Width="150"
+                        Height="25"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        BorderBrush="White"
+                        CaretBrush="White"
+                        FontSize="13"
+                        FontWeight="Bold"
+                        Foreground="White"
+                        InputScope="TelephoneNumber"
+                        SelectionBrush="White" />
+
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Label
+                        Width="210"
+                        Margin="0,10,0,3"
+                        HorizontalAlignment="Center"
+                        HorizontalContentAlignment="Center"
+                        FontSize="14"
+                        Foreground="White">
+                        Email:
+                    </Label>
+                    <TextBox
+                        x:Name="EmailBox"
+                        Width="150"
+                        Height="25"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        BorderBrush="White"
+                        CaretBrush="White"
+                        FontSize="13"
+                        FontWeight="Bold"
+                        Foreground="White"
+                        InputScope="EmailUserName"
+                        SelectionBrush="White" />
+
+                    <Label
+                        Width="210"
+                        Margin="0,10,0,3"
+                        HorizontalAlignment="Center"
+                        HorizontalContentAlignment="Center"
+                        FontSize="14"
+                        Foreground="White">
+                        Придумайте пароль:
+                    </Label>
+                    <PasswordBox
+                        x:Name="pass1Box"
+                        Width="150"
+                        Height="25"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        BorderBrush="White"
+                        CaretBrush="White"
+                        FontSize="13"
+                        FontWeight="Bold"
+                        Foreground="White"
+                        SelectionBrush="White" />
+
+                    <Label
+                        Width="210"
+                        Margin="0,3,0,3"
+                        HorizontalAlignment="Center"
+                        HorizontalContentAlignment="Center"
+                        FontSize="14"
+                        Foreground="White">
+                        Повторите пароль:
+                    </Label>
+                    <PasswordBox
+                        x:Name="pass2Box"
+                        Width="150"
+                        Height="25"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        BorderBrush="White"
+                        CaretBrush="White"
+                        FontSize="13"
+                        FontWeight="Bold"
+                        Foreground="White"
+                        SelectionBrush="White" />
+                </StackPanel>
+                <!--
+                    ,[FIO]
+                    ,[Birthday]
+                    ,[Phone Number]
+                    ,[Email]
+                    ,[Adress]
+                    ,[Password]
+                -->
+            </StackPanel>
+            <Button
+                Width="185"
+                Height="25"
+                Margin="7"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                Background="Transparent"
+                BorderBrush="White"
+                BorderThickness="1"
+                Click="Button_Click"
+                Content="Зарегистрирповаться"
+                FontFamily="Fonts/#Main"
+                FontSize="15"
+                Foreground="White" />
+        </StackPanel>
+    </Grid>
+</Window>

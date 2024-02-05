@@ -1,0 +1,89 @@
+﻿<Window
+    x:Class="Индивидуальное_предпринимательство_по_производство_мыла.Parol"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Индивидуальное_предпринимательство_по_производство_мыла"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Parol"
+    Width="350"
+    Height="350"
+    AllowsTransparency="True"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Grid Background="LightSeaGreen">
+        <TextBlock
+            Margin="0,78,0,214"
+            HorizontalAlignment="Center"
+            FontSize="30"
+            FontWeight="Bold"
+            Foreground="White"
+            TextDecorations="Underline">
+            АВТОРИЗАЦИЯ
+        </TextBlock>
+        <Label
+            Margin="110,136,110,184"
+            FontSize="15"
+            Foreground="White">
+            Введите логин:
+        </Label>
+        <TextBox
+            x:Name="Log"
+            Width="150"
+            Height="25"
+            Margin="97,171,103,154"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            BorderBrush="White"
+            CaretBrush="White"
+            FontSize="13"
+            FontWeight="Bold"
+            Foreground="White"
+            SelectionBrush="White" />
+        <Label
+            Margin="110,201,110,119"
+            FontSize="15"
+            Foreground="White">
+            Введите пароль:
+        </Label>
+        <PasswordBox
+            x:Name="Pass"
+            Width="150"
+            Height="25"
+            Margin="72,216,78,84"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            BorderBrush="White"
+            CaretBrush="White"
+            Foreground="White"
+            SelectionBrush="White" />
+        <Button
+            Width="130"
+            Height="40"
+            Margin="88,273,88,0"
+            VerticalAlignment="Top"
+            Background="Transparent"
+            BorderBrush="White"
+            BorderThickness="1"
+            Click="Button_Click"
+            Content="Войти"
+            FontFamily="Fonts/#Main"
+            FontSize="20"
+            Foreground="White" />
+
+        <Button
+            Width="100"
+            Height="25"
+            Margin="10,10,240,0"
+            VerticalAlignment="Top"
+            Background="Transparent"
+            BorderBrush="White"
+            BorderThickness="1"
+            Click="Back_Click"
+            Content="Назад"
+            FontFamily="Fonts/#Main"
+            FontSize="15"
+            Foreground="White" />
+    </Grid>
+</Window>

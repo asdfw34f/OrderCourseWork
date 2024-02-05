@@ -1,0 +1,94 @@
+﻿<Page
+    x:Class="Индивидуальное_предпринимательство_по_производство_мыла.Orders"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Индивидуальное_предпринимательство_по_производство_мыла"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Заказы"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+
+    <Grid>
+        <Button
+            Width="170"
+            Height="30"
+            Margin="10"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            Background="Transparent"
+            BorderBrush="White"
+            BorderThickness="1"
+            Click="Button_Click"
+            Content="Закрыть заказ"
+            FontFamily="Fonts/#Main"
+            FontSize="20"
+            Foreground="White" />
+        <ListView
+            x:Name="OrdersView"
+            Margin="0,0,0,45"
+            HorizontalContentAlignment="Center"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+            SelectionMode="Single">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel HorizontalAlignment="Center" Orientation="Horizontal" />
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border
+                        x:Name="OrderBorder"
+                        Margin="5"
+                        BorderBrush="White"
+                        BorderThickness="1"
+                        CornerRadius="2">
+                        <StackPanel
+                            x:Name="StackOrder"
+                            Width="850"
+                            Height="145">
+                            <TextBlock
+                                Margin="3"
+                                HorizontalAlignment="Left"
+                                FontSize="25"
+                                FontWeight="Bold"
+                                Foreground="White"
+                                Text="{Binding Product.Name}" />
+                            <TextBlock
+                                x:Name="ColorText"
+                                Margin="3,0,0,0"
+                                HorizontalAlignment="Left"
+                                FontSize="15"
+                                Foreground="White"
+                                Text="{Binding Product.Price}" />
+
+                            <TextBlock
+                                Margin="3"
+                                HorizontalAlignment="Left"
+                                FontSize="15"
+                                Foreground="White"
+                                Text="{Binding Client.FIO}" />
+
+                            <TextBlock
+                                Margin="3"
+                                HorizontalAlignment="Left"
+                                FontSize="15"
+                                Foreground="White"
+                                Text="{Binding Client.Email}" />
+
+                            <TextBlock
+                                Margin="3"
+                                HorizontalAlignment="Left"
+                                FontSize="15"
+                                Foreground="White"
+                                Text="{Binding Client.Adress}" />
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>
