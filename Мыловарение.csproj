@@ -283,23 +283,57 @@
     <Resource Include="Res\Icons\storage.png" />
     <Resource Include="Res\Icons\order.png" />
     <Resource Include="Res\Icons\client.png" />
-    <Resource Include="bin\Debug\Soap\chereda.jpg" />
-    <Resource Include="bin\Debug\Soap\degtar-chern.jpg" />
-    <Resource Include="bin\Debug\Soap\degtar-shapm.jpg" />
-    <Resource Include="bin\Debug\Soap\degtar-skrab.jpg" />
-    <Resource Include="bin\Debug\Soap\degtar2.jpg" />
-    <Resource Include="bin\Debug\Soap\lavanda.jpg" />
-    <Resource Include="bin\Debug\Soap\marsel.jpg" />
-    <Resource Include="bin\Debug\Soap\morskoye.jpg" />
-    <Resource Include="bin\Debug\Soap\myata.jpg" />
-    <Resource Include="bin\Debug\Soap\opyhka.jpg" />
-    <Resource Include="bin\Debug\Soap\qiwi.jpg" />
-    <Resource Include="bin\Debug\Soap\romahka.jpg" />
-    <Resource Include="bin\Debug\Soap\fresh.jpg" />
-    <Resource Include="bin\Debug\Soap\glint.jpg" />
-    <Resource Include="bin\Debug\Soap\korica.jpg" />
-    <Resource Include="bin\Debug\Soap\mohito.jpg" />
-    <Resource Include="bin\Debug\Soap\limon.jpg" />
+    <Resource Include="bin\Debug\Soap\chereda.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="bin\Debug\Soap\degtar-chern.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="bin\Debug\Soap\degtar-shapm.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="bin\Debug\Soap\degtar-skrab.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="bin\Debug\Soap\degtar2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="bin\Debug\Soap\lavanda.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="bin\Debug\Soap\marsel.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="bin\Debug\Soap\morskoye.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="bin\Debug\Soap\myata.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="bin\Debug\Soap\opyhka.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="bin\Debug\Soap\qiwi.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="bin\Debug\Soap\romahka.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="bin\Debug\Soap\fresh.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="bin\Debug\Soap\glint.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="bin\Debug\Soap\korica.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="bin\Debug\Soap\mohito.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="bin\Debug\Soap\limon.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />
